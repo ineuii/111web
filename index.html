@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- id와 class의 차이 이해하기!! -->
+        <div id="header" class="clearfix">
+            <h1>
+                <a href="https://youtu.be/zdvnyInXEFs">
+                    <!-- tap로 이동할때 a를 타고 이동함 -->
+                    <img src="images/logo.jpg" alt="롯데월드">
+                    <!-- 경로가 잘못 되어서 이미지가 안나올때 alt가 대신 나옴 -->
+                </a>
+            </h1>
+            <div class="nav">
+                <!-- navigation을 보통 nav라고 많이함 -->
+                <!-- ul->unordered list, ol->ordered list /li 필요 -->
+                <ul>
+                    <li><a href="#">즐길거리</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">요금/우대혜택</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">참여프로그램</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이용가이드</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소통서비스</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li onclick="myFunction()"><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- nav -->
+        </div>
+        <!-- header -->
+        <!-- header 안에 navigation을 넣는다 -->
+        <div id="banner">
+            <div class="slideList">
+                <!-- 전체 슬라이드를 담는 부모 -->
+                <div class="slideImage">
+                    <!-- 이미지와 글씨를 담는 부모 -->
+                    <h2>이미지1</h2>
+                    <img src="images/banner01.jpg" alt="크리스마스">
+                </div><!-- slideImg -->
+                <div class="slideImage">
+                    <h2>이미지2</h2>
+                    <img src="images/banner01.jpg" alt="크리스마스">
+                </div><!-- slideImg -->
+                <div class="slideImage">
+                    <h2>이미지3</h2>
+                    <img src="images/banner01.jpg" alt="크리스마스">
+                </div><!-- slideImg -->
+            </div><!-- slideList -->
+        </div> <!-- banner -->
+        <!-- header -->
+        <div id="content1" class="clearfix">
+            <div class="notice">
+                <ul class="clearfix">
+                    <li class="active">
+                        <a href="#">롯데월드소식</a>
+                        <ul>
+                            <li>
+                                <a href="#">1.첫번째 목록입니다.1.첫번째 목록입니다.</a>
+                                <span>2022.10.31</span>
+                            </li>
+                            <li>
+                                <a href="#">2.두번째 목록입니다.2.두번째 목록입니다.</a>
+                                <span>2022.10.31</span>
+                            </li>
+                            <li>
+                                <a href="#">3.세번째 목록입니다.3.세번째 목록입니다.</a>
+                                <span>2022.10.31</span>
+                            </li>
+                            <li>
+                                <a href="#">1.첫번째 목록입니다.1.첫번째 목록입니다.</a>
+                                <span>2022.10.31</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">뉴스&middot;공지</a>
+                        <ul>
+                            <li>
+                                <a href="#">2.두번째 목록입니다.2.두번째 목록입니다.</a>
+                                <span>2022.10.31</span>
+                            </li>
+                            <li>
+                                <a href="#">2.두번째 목록입니다.2.두번째 목록입니다.</a>
+                                <span>2022.10.31</span>
+                            </li>
+                            <li>
+                                <a href="#">2.두번째 목록입니다.2.두번째 목록입니다.</a>
+                                <span>2022.10.31</span>
+                            </li>
+                            <li>
+                                <a href="#">2.두번째 목록입니다.2.두번째 목록입니다.</a>
+                                <span>2022.10.31</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- notice -->
+            <div class="ad">
+                <a href="#">
+                    <img src="images/ad.jpg" alt="온종일혜택">
+                </a>
+            </div><!-- ad -->
+        </div><!-- content1 -->
+        <div id="content2">
+            <h2>특별한 경험</h2>
+            <ul class="clearfix">
+                <li>
+                    <div><img src="images/s1.jpg" alt="연관회원안내"></div>
+                    <span>연관회원안내</span>
+                </li>
+                <li>
+                    <div><img src="images/s2.jpg" alt="연관회원안내"></div>
+                    <span>연관회원안내</span>
+                </li>
+                <li>
+                    <div><img src="images/s3.jpg" alt="연관회원안내"></div>
+                    <span>연관회원안내</span>
+                </li>
+                <li>
+                    <div><img src="images/s4.jpg" alt="연관회원안내"></div>
+                    <span>연관회원안내</span>
+                </li>
+            </ul><!--li >img.nth.span특별한 경험  -->
+        </div><!-- content2 -->
+        
+        <div id="footer">
+            <address>
+                <ul>
+                    <li class="left">서울 특별시 송파구 올림픽로 240 롯데월드</li>
+                    <li>대표자 : 박동기</li>
+                    <li>사업자등록번호 : 229-093-003921</li>
+                    <li class="left">통신판매신고 : 384-0284-9032</li>
+                    <li>전화 : 02-3848-8852</li>
+                </ul>
+                <p>
+                    copyright 2018 Lotteworld, All right RESERVED.
+                </p>
+            </address>
+            <div class="ani_txt">
+                <ul>
+                    <li><a href="#">임금자를 찾습니다</a></li>
+                    <li><a href="#">10월 이벤트 당첨자</a></li>
+                    <li><a href="#">조명디자인 공모전 당첨자</a></li>
+                    <li><a href="#">행사일정확인</a></li>
+                    <li><a href="#">리뷰 이벤트 당첨자</a></li>
+                    <li><a href="#">입금자를 찾습니다</a></li>
+                </ul>
+            </div>
+        </div><!-- footer -->
+    </div><!-- wrap -->
+
+
+    <!-- 팝업 -->
+    <div class="layer_bg">
+        <div class="layer">
+            <h2>타이틀</h2>
+            <a href="#" class="close">닫기</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        //$(누구).이벤트(할일);
+        //$(누구).mouseover(function(){실행문});
+        //.find()-->css에서 띄워쓰기와 동일. 자손 
+        $('.nav>ul>li').mouseover(function () {
+            console.log('열심히 하겠습니다')
+            $(this).find('.submenu').stop().slideDown();
+        });
+        $('.nav>ul>li').mouseout(function () {
+            $(this).find('.submenu').stop().slideUp();
+        });
+
+        //banner
+        var currentIndex = 0; //=:의미 오른쪽에 있는 것을 왼쪽에 대입한다 
+        //var --> 변수선언 (지금부터 변수가 만들어짐)
+        //currentIndex = 3;
+        //console.log(currentIndex) //currentIndex -->변수이름
+
+        //setInterval(할일,시간(1s))-->1초마다 할일 
+        //if(조건문){조건문이 참일 때 실행}
+        /* if(조건문){조건문이 참일때 실행
+        }else{
+            조건문이 참이 아닐때 실행문
+        } */
+        setInterval(function () {
+            if (currentIndex < 2) {
+                //1씩 더하라
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+
+            var slideposition = currentIndex * (-378) + "px";
+            console.log(slideposition);
+
+            //$('.slideList').animate({실행문},시간)
+            $('.slideList').animate({
+                top: slideposition
+            }, 400)
+
+        }, 3000);
+
+
+        //텝메뉴
+        var tabmenu = $('.notice');
+        //.find()  ---> css에서의 띄워쓰기, 자손
+        //.children()  --->css에서의 >, 자식
+        //.hide()  ---> css에서 display:none 
+        //.show()  ---> css의 display:block
+        // >  ---> 바로밑 자식
+        tabmenu.find('ul li ul').hide();
+        tabmenu.find('ul li.active ul').show();
+
+
+        //tabmenu.find('ul>li>a').click(할일);
+        //tabmenu.find('ul>li>a').click(function(){실행문});
+        //.parent()  ---> 부모를 부르는 방법
+        //.siblings()  ---> 나를 제외한 형제들을 부르는 방법
+        //.next()   ---> 형제중에 바로밑 동생// 내가 셋째라면 넷째를 부름
+        tabmenu.find('ul>li>a').click(function (e) {
+            e.preventDefault();
+            $(this).parent('li').addClass('active').siblings('li').removeClass('active'); //class를 이동하게 함
+            tabmenu.find('ul li ul').hide(); //일단 없앰
+            $(this).next('ul').show(); //다시 나타나게함
+        });
+        
+
+        //pop-up
+         $('.ad').click(function(){
+            $('.layer_bg').fadeIn();   
+            //show 대신 사용가능, 2000(2s) ->fadeIn, slideDown
+         });
+         $('.close').click(function(){
+            $('.layer_bg').hide();
+         })
+
+         //window 창
+         
+        function myFunction() {
+        var myWindow = window.open("contact.html", "", "width=400,height=500,left=200,top=300");}
+        </script>
+
+</body>
+</html>

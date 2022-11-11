@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* font값을 주지 않으면 기본값이 16px */
+
+li {
+    list-style: none;
+}
+
+/* list의 bullet문자를 삭제할때 사용 */
+
+a {
+    text-decoration: none;
+    /*  밑줄을 삭제 */
+    color: #333;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* wrap */
+#wrap {
+    width: 1000px;
+    border: 1px solid white;
+    margin: 0 auto;
+}
+
+/* header */
+#header {}
+
+#header h1 {
+    float: left;
+    width: 130px;
+    padding-top: 5px;
+}
+
+#header h1 a {}
+
+#header h1 a img {
+    width: 100%;
+}
+
+#header .nav {
+    margin-top: 20px;
+    float: right;
+    /*  부모의 오른쪽o, 나의 오른쪽x */
+}
+
+#header .nav ul {}
+
+#header .nav ul li {
+    position: relative;
+    float: left;
+    width: 120px;
+    text-align: center;
+    background-color: blue;
+}
+
+#header .nav ul li a {
+    /*a는 인라인요소, 인라인요소는 margin,padding 양쪽(좌우)만 적용O, 상하는 X*/
+    display: block;
+    background-color: #ccc;
+    padding: 20px 15px;
+    transform: 0.3s;
+
+}
+
+#header .nav ul li a:hover {
+    /* :~라면 가정태크   */
+    background-color: #ddd;
+}
+
+#header .nav ul li .submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 62px;
+    z-index: 10;
+}
+
+/* banner */
+/* 제일 먼저 해야할 거 
+1. banner 높이 설정 및 img 넓이를 통해서 사이즈를 설정 먼저하기 
+2. 중앙 정렬
+3. position 설정*/
+#banner {
+    height: 378px;
+    overflow: hidden;
+}
+
+#banner .slideList { /* 전체 이미지를 통으로 돌리기 위해서 전체를 싸줘야 함 */
+    position: relative;
+}
+
+#banner .slideList .slideImage {
+    position: relative;
+}
+
+#banner .slideList .slideImage h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,96,255,0.7);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+#banner .slideList .slideImage img {
+   /*  img테그의 빈공간처리 (img는 inline요소라 빈공간이 생긴다)
+    1)display:block;
+    2)vertical-align: top */
+    vertical-align: top;
+    width: 100%;
+} /* content1 */
+
+#content1{
+    margin-top: 15px;
+}
+#content1 .notice{
+    position: relative;
+    float: left;
+    width: 49%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 30px;
+    height: 218px;
+}
+#content1 .notice ul{
+    
+}
+#content1 .notice ul li{
+    float: left;
+}
+#content1 .notice ul li a{
+    font-size: 24px;
+    color: #999;
+    font-weight: bold; /* 폰트의 두께 */
+}
+#content1 .notice ul li.active a{
+    color: #000;
+}
+#content1 .notice ul li ul{
+    position: absolute;
+    left: 30px; top: 70px;
+}
+#content1 .notice ul li ul li{}
+#content1 .notice ul li ul li a{
+    float: left;
+    width: 68%;
+    /* 말줄임말 */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* 말줄임말 */
+}
+#content1 .notice ul li ul li span{
+    float: right;
+    padding-right: 5%;
+}
+#content1 .ad{
+    float: right;
+    width: 49%;
+}
+#content1 .ad a{}
+#content1 .ad a img{width:100%;}
+
+/* #content2 */
+#content2{margin-top: 15px;}
+#content2 h2{margin-bottom: 10px;}
+#content2 ul{}
+#content2 ul li{
+    width: 24.25%;
+    float: left;
+    margin-right: 1%;
+}
+#content2 ul li:last-child{margin-right: 0%;} /* 막내를 부르는 법 */
+#content2 ul li div{
+    overflow: hidden;
+}
+#content2 ul li div img{
+    width: 100%;
+    transition:0.3s
+}
+#content2 ul li div:hover img{
+    transform: scale(1.2);
+}
+#content2 ul li span{}
+
+/* footer */
+#footer{
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding: 30px 0;
+    position: relative;
+}
+#footer address{
+    font-style: normal;     
+}
+#footer address ul{
+    width: 669px;
+}
+#footer address ul li{
+    /* inline요소는 margin, padding의 상하는 적용안됨,좌우는 적용됨 */
+    /* margin, padding에 백분율(%)을 줄때 기준은 무조건 부모의 넓이  */
+    display: inline;
+    padding: 0 15px 0 10px;
+    position: relative;
+}
+#footer address ul li::after{
+    content: "";
+    position: absolute;
+    right: 0;top:3px;width: 1px;height: 13px;
+    background-color: #666;
+}
+#footer address ul li:nth-child(3)::after,
+#footer address ul li:last-child::after{
+    height: 0;width: 0;
+}
+#footer address ul li.left{
+    padding-left: 0px;
+}
+#footer address p{
+    padding-top: 30px;
+    text-transform: uppercase;
+}
+
+.ani_txt{
+    position: absolute;
+    top: 30px;right: 0;
+    width: 210px; height: 20px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+.ani_txt ul{
+    position: relative;
+    left: 10px;top: 0;
+    animation:txt_ani 6s infinite 
+}
+.ani_txt ul li{}
+.ani_txt ul li a{}
+
+@keyframes txt_ani {
+    0%{top: 0;}
+    20%{top: -19px;}
+    40%{top: -37px;}
+    60%{top:-57px;}
+    80%{top: -76px;}
+    100%{top: -94px;}
+}
+
+/* 팝업 */
+.layer_bg{
+    display: none;
+    position: fixed;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.layer_bg .layer{
+    background-color: #ccc; 
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;height: 500px;
+    padding: 30px;
+}
+.layer_bg .layer h2{font-size: 30px;}
+.layer_bg .layer .close{
+    position: absolute;
+    bottom:30px; right:30px;
+}
